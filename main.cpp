@@ -63,21 +63,21 @@ int main() {
         
 
 
-            if(axes[2] != 0){
+            
 
-                //adjusting leds based on hz of time on/off
-                //Blue Led PC9 just wouldn't dim???
+        //adjusting leds based on hz of time on/off
+        //Blue Led PC9 just wouldn't dim???
 
-                ledB.write(BLUE);
-                BLUE = (((sqrt(axes[0]*axes[0]))/(1020)));  //ajusts Green led2 in place of blue led for x
-                ledR.write(RED);
-                RED = (((sqrt(axes[1]*axes[1]))/(1020)));  //ajusts RED led for y
-                ledG.write(GREEN);
-                GREEN = (((sqrt(axes[2]*axes[2]))/(1020)));  //ajusts green led1 for Z
+        ledB.write(BLUE);
+        BLUE = ((sqrt(axes[0]*axes[0]))/(1020));  //ajusts Green led2 in place of blue led for x
+        ledR.write(RED);
+        RED = ((sqrt(axes[1]*axes[1]))/(1020));  //ajusts RED led for y
+        ledG.write(GREEN);
+        GREEN = ((sqrt(axes[2]*axes[2]))/(1020));  //ajusts green led1 for Z
 
-            }
+        }
             
 
         thread_sleep_for(500);  //sleep 0.5 seconds and return to begining of loop
-    }
+    
 }
